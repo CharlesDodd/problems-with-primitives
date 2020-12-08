@@ -9,6 +9,11 @@ Maths:
 
 Given a datagram  given by  <img src="https://render.githubusercontent.com/render/math?math=datagram_{1}=(header_{1},payload_{1})">  and a Hash construction like so:
 
+![](bad_hash.png)
+
+We can pick a different random header <img src="https://render.githubusercontent.com/render/math?math=header_{2}">  and calculate a payload such that the combination produces a collision. The following is a formula:
 
 
 <img src="https://render.githubusercontent.com/render/math?math=payload_{2}%20=%20\text{SHACAL}^{-1}_{header_{2}}(\text{SHACAL}_{header_{1}}(payload_{1})\oplus%20header_{1}%20\oplus%20header_{2})">
+
+
